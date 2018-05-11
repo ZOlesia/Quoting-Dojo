@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Quoting Wall</h1>
+        <%for(var i in all_quotes){%>
+            <p style="color: gray">"<%= all_quotes[i].quote %>"</p>
+            <p class="text-center font-italic" style="padding-right: 15px"> - <%= all_quotes[i].name %> on <%= all_quotes[i].createdAt.toLocaleString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})%> at <%= all_quotes[i].createdAt.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}) %> </p>
+
+        <%}%>
+    </div>
+</body>
+</html>
